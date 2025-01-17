@@ -1,0 +1,17 @@
+package inputTest;
+
+import java.util.Scanner;
+
+public class InputTest02 {
+	public static void main(String[] args) {
+//		두 실수를 입력 한뒤 곱셈 결과 출력
+		System.out.println("실수를 두 개 입력해주세요!");
+		Scanner num = new Scanner(System.in);
+		String num1 = null;
+		String num2 = null;
+		num1 = num.next();
+		num2 = num.next();
+		double result = Double.parseDouble(num1) * Integer.parseInt(num2);
+		System.out.printf("곱셈 결과는 %.2f 입니다.", result );
+	}
+}

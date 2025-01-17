@@ -1,0 +1,18 @@
+package operTest;
+
+import java.util.Scanner;
+
+public class OperTest02 {
+	public static void main(String[] args) {
+		int num1=0, num2=0, result=0;
+		Scanner num = new Scanner(System.in);
+		
+		num1 = num.nextInt();
+		num2 = num.nextInt();
+		result = num1 > num2 ? num1 : num2 ;
+		result = String.format(String, result)
+	}
+}
+
+// 일단 비교하고
+// 추가로 같은 값일 때 다른 메시지 출력

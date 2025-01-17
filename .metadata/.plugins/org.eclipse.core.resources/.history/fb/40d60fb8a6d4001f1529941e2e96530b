@@ -1,0 +1,18 @@
+package methodTest;
+
+public class MethodP {
+	
+	void increase(int data) {
+		data+= 10;
+	}
+	
+	
+	
+	
+	public static void main(String[] args) {
+		MethodP m = new MethodP();
+		int data = 20;
+		System.out.println(m.increase(data));
+		
+	}
+}

@@ -1,0 +1,24 @@
+package inputTest;
+
+import java.util.Scanner;
+
+public class InputTest03 {
+	public static void main(String[] args) {
+//		3개의 정수를 한 번에 입력받은 후 덧셈 결과 출력
+		int num1 = 0, num2=0 , num3=0, result=0;
+		Scanner num = new Scanner(System.in);
+		
+		num1 = num.nextInt(); 
+		num2 = num.nextInt();
+		num3 = num.nextInt();		
+		result = num1 + num2 + num3 ;
+		
+		
+		System.out.println(result + "입니다." );
+				
+//		정수 선언
+//		입력한 값 저장 3번
+//		덧셈
+//		
+	}
+}

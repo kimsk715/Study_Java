@@ -1,0 +1,9 @@
+package inputTest;
+
+public class InputTest03 {
+	public static void main(String[] args) {
+//		3개의 정수를 한 번에 입력받은 후 덧셈 결과 출력
+		int num1 = 0, num2=0,num3=0;
+		
+	}
+}

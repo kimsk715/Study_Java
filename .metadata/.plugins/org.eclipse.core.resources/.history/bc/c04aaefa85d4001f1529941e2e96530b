@@ -1,0 +1,13 @@
+package methodTest;
+
+public class MethodTest {
+	
+//	f(X) = 2X + 1;
+	int f(int x) {
+		return 2*x + 1;
+	}
+	public void main(String[] args) {
+		// 리턴이 없을 때 void 이므로, 리턴타입 지정하기 전 까지 void로 시작.
+		f(3);
+	}
+}

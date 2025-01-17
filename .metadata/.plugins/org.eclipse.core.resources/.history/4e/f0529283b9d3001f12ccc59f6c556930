@@ -1,0 +1,7 @@
+package casingTest;
+
+public class CastingTest02 {
+	public static void main(String[] args) {
+		
+	}
+}

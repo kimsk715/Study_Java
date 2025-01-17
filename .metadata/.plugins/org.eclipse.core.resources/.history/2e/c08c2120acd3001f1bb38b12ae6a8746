@@ -1,0 +1,10 @@
+package printTest;
+
+public class PrintTest {
+	public static void main(String[] args) {
+		System.out.print("한동석");
+		System.out.print("20살");
+//		1. 소스코드에 설명을 작성할 때
+//		2. CTRL + /
+	}
+}

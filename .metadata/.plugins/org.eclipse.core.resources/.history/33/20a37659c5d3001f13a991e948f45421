@@ -1,0 +1,17 @@
+package inputTest;
+
+import java.util.Scanner;
+
+public class InputTest02 {
+	public static void main(String[] args) {
+//		두 실수를 입력 한뒤 곱셈 결과 출력
+		
+		Scanner num = new Scanner(System.in);
+		double num1 = 0.0;
+		double num2 = 0.0;
+		num1 = num.next();
+		num2 = num.next();
+		double result = num1 * num2;
+		System.out.println("곱셈 결과는 "+result + " 입니다.");
+	}
+}

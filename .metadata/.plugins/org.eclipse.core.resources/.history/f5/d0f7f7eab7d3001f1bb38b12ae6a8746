@@ -1,0 +1,9 @@
+package casingTest;
+
+public class CastingTest01 {
+	public static void main(String[] args) {
+//		자동 형변환
+		System.out.println( 5/2 );
+		System.out.println( 5/2.0);
+	}
+}

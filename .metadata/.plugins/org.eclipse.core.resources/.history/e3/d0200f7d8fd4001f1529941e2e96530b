@@ -1,0 +1,15 @@
+package methodTest;
+
+public class MethodTest {
+	
+//	f(X) = 2X + 1;
+	int f(int x) {
+		return 2*x + 1;
+	}
+	public static void main(String[] args) {
+		MethodTest m = new MethodTest();
+		System.out.println(m.f(3));
+// 	리턴이 없을 때 void 이므로, 리턴타입 지정하기 전 까지 void로 시작.
+//	static 에서 인식하려면, 같은 static 이거나 Heap 메모리에 존재하면 됨.
+	}
+}

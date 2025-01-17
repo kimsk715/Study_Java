@@ -1,0 +1,15 @@
+package inputTest;
+
+import java.util.Scanner;
+
+public class InputTest02 {
+	public static void main(String[] args) {
+//		두 실수를 입력 한뒤 곱셈 결과 출력
+		
+		Scanner num = new Scaneer(System.in);
+		int num1 = 0;
+		int num2 = 0;
+		num1 = num.next();
+		num2 = num.next();
+	}
+}

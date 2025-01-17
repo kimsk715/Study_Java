@@ -1,0 +1,159 @@
+package methodTest;
+
+import java.util.Scanner;
+
+public class MethodTask {
+	
+	void printNum() {
+//	1~10까지 println()으로 출력하는 메소드
+		for(int i=0; i<10; i++) {
+			System.out.print(i+1 + " ");
+		}
+	}
+//	홍길동 n번 출력
+	void printHong(int n) {
+		for(int i=0; i<n; i++) {
+			System.out.print("홍길동 ");
+		}
+		System.out.println("\n");
+	}
+//	이름 n번 출력	
+	void printName(int n, String name) {
+		for(int i=0; i<n; i++) {
+			System.out.print(name+" ");
+		}
+	}
+//	세 정수의 뺄셈 메소드
+	int subStract3(int m, int n, int o) {	
+		return (m-n-o);
+	}
+	
+	int squareN(int n, int m){
+		int result = 1;
+		for(int i=0; i<n; i++) {
+			result *= m;
+//			m의 n승
+		}
+			return result;
+	}		
+	
+	
+	
+//	두 정수의 나눗셈 후 몫과 나머지 두개 반드시 리턴
+	int[] divideTwo(int num1, int num2) {
+		int[] divide = null;
+		if(num2 !=0) {
+		divide = new int[] {num1/num2, num1%num2};	
+		}
+		return divide;
+	}
+
+//	두 정수의 덧셈과 뺄셈 구해주는 메소드
+	
+	int[] plusMinus(int num3, int num4) {
+		int[] calc = null;
+		if(num3 > num4) {
+			calc = new int[] {num3+num4, num3-num4};
+		}
+		else {
+			calc = new int[] {num3+num4, num4-num3};
+		}
+		
+		return calc;
+	}
+//	1~n까지의 합
+	
+	int sum(int n) {
+		int total = 0;
+		for(int i=0; i<n; i++) {
+			total += i+1;
+		}
+		return total;
+	}
+	
+	int change(int n) {
+		return n+1;
+	}
+	
+//	5개의 정수를 입력받고 최댓값, 최솟값
+	
+	int[] getMaxMin(int[] numbers) {
+		int max = numbers[0];
+		int min = numbers[0];
+		for(int i=0; i<4; i++) {
+			max = max > numbers[i+1] ? max : numbers[i+1];
+			min = min < numbers[i+1] ? min : numbers[i+1];
+		}
+		int[] arResult = {max,min};		
+		return arResult;
+		
+	}
+//	리턴 타입은 void, 사용하는 부분에서 메소드 내부의 결과값을 사용할 수 있도록 구현.
+//	void printHong(int n) {
+//		for(int i=0; i<n; i++) {
+//			System.out.print("홍길동 ");
+//		}
+//		System.out.println("\n");
+//	}
+	void getMaxMin2(int[] arNum) {
+		int max = arNum[0];
+		int min = arNum[0];
+		for(int i=0; i<4; i++) {
+			max = max > arNum[i+1] ? max : arNum[i+1];
+			min = min < arNum[i+1] ? min : arNum[i+1];
+		}
+		System.out.printf("최댓값은 %d, 최솟값은 %d", max, min);
+	}
+
+	
+	public static void main(String[] args) {
+		MethodTask m = new MethodTask();
+//		int result = 0 ;
+//		result = m.squareN(2,3);
+//		System.out.println(result);
+//	정수 1개를 입력 받고, 차수도 입력받는다.
+//	해당 차수만큼의 값을 구해주는 메소드 선언
+//		
+//		System.out.print("숫자를 입력 ");
+//		System.out.println("이름을 입력");
+////		m.printNum();
+//		Scanner num = new Scanner(System.in);
+//		Scanner name = new Scanner(System.in);
+//		int number = 0;
+//		number = num.nextInt();
+//		String name1 = "";
+//		name1 = name.next();
+//		m.printHong(number);
+//		m.printName(number, name1);
+//		위에는 입력까지 테스트한 내용.
+		
+//		System.out.println(m.subStract3(10, 4, 3));
+//		int[] arResult = null;
+//		arResult = m.divideTwo(10, 3);
+//	      
+//	      if(arResult == null) {
+//	         System.out.println("0으로 나눌 수 없습니다.");
+//	      }else {
+//	         System.out.println("몫: " + arResult[0] + ", 나머지: " + arResult[1]);
+//	      }
+//		arResult = m.plusMinus(5, 19);
+//		System.out.println("두 수의 합은 " + arResult[0] +", 두 수의 차는 " + arResult[1]);
+//	    
+		Scanner numbers = new Scanner(System.in);
+		int[] check = new int[5];
+		
+		for(int i=0; i<5; i++) {
+			System.out.println("정수를 입력 받으세요.");
+			check[i] = numbers.nextInt();
+		}
+		
+		int[] arResult = m.getMaxMin(check);
+		System.out.println("최댓값은 " + arResult[0] + ", 최솟값은 " + arResult[1]);
+//		
+////		System.out.println("합은 " + m.sum(5));
+//		System.out.println(m.change(10));
+		
+		
+		
+	}
+}
