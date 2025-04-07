@@ -51,19 +51,6 @@ JDK(Java Development Kit)
 		JRE 외에 개발에 필요한 도구들을 갖고 있음.
 		컴파일 명령어와 실행 명령어를 담고 있음.
 
-==================================================================================================================
-JDK 설치
-https://drive.google.com/file/d/1bsLuMXWQ-yg50m4SNToucnhEBMLSg6He/view?usp=drive_link
-
-IDE 설치
-	- 이클립스
-https://drive.google.com/file/d/18qYUbfdkXWrX0hbSnvFOuihh9MXI_k7j/view?usp=drive_link
-
-	- 인텔리제이(유료) - 이메일 등록해서 사용.
-
-
-==================================================================================================================
-
 자바의 기본 구조
 	프로젝트
 		패키지(소문자로 시작)
