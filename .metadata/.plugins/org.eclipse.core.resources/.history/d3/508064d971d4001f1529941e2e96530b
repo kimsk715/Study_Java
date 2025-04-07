@@ -1,9 +1,0 @@
-package arrayTest;
-
-public class ArrayTest01 {
-	public static void main(String[] args) {
-		int[] arData = new int[5];
-		
-		System.out.println(arData);
-	}
-}

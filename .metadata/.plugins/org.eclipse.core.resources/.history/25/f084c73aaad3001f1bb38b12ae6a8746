@@ -1,6 +1,0 @@
-package printTest;
-
-public class PrintTest {
-	public void main(String[] args) {
-	}
-}

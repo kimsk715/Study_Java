@@ -1,7 +1,0 @@
-package inputTest;
-
-public class InputTest01 {
-	public static void main(String[] args) {
-		Scanner name = new Scanner(System.in)
-	}
-}

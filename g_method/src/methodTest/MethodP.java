@@ -22,7 +22,7 @@ public class MethodP {
 //		System.out.println("메소드1 밖에서의 값 : " + data); // void는 리턴값이 없기 때문에, 그대로 20이 출력됨.
 		
 		int[] data2 = {20};  // data2의 0번째 방에 20이라는 정수 데이터 저장.
-		m.increase2(data2);
+//		m.increase2(data2);
 		m.increase2(data2);// 메소드 실행.
 		
 		

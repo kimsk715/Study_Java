@@ -68,7 +68,7 @@ public class MethodTask {
 	int[] getMaxMin(int[] numbers) {
 		int max = numbers[0];
 		int min = numbers[0];
-		for(int i=0; i<4; i++) {
+		for(int i=0; i<numbers.length-1; i++) {
 			max = max > numbers[i+1] ? max : numbers[i+1];
 			min = min < numbers[i+1] ? min : numbers[i+1];
 		}
@@ -80,16 +80,17 @@ public class MethodTask {
 //  위에서 해결한 문제를 아래의 방법으로 해결한다.
 //  리턴 타입은 void로 설정하고, 사용하는 부분에서 메소드 내부의 결과값을 사용할 수 있도록 구현
 //  원본이 바뀌지 않게 새로운 매개변수를 받는다.
+//	
 
-	void getMaxMin2(int[] arNum, int result[]) { //메소드에서 입력받을 내용물 = int 배열
+	void getMaxMin2(int[] arNum, int result[]) { //메소드에서 입력받을 내용물 = int 배열. 수정 가능한 상태가 됨. --> 원본이 어디서 수정되었는지 확인하기 힘듦.
 		result[0] = arNum[0];
 		result[1] = arNum[0]; // 최대, 최소를 변수로 정의하고, 초기값을 아예 배열의 첫번째 값으로 설정.
-		for(int i=0; i<4; i++) { // 첫번째 값은 비교할 필요가 없으므로, 4번만 반복하고 2~5번째 값들만 비교 
+		for(int i=0; i<arNum.length-1; i++) { // 첫번째 값은 비교할 필요가 없으므로, 4번만 반복하고 2~5번째 값들만 비교 
 			result[0] = result[0] > arNum[i+1] ? result[0] : arNum[i+1];
 			result[1] = result[1] < arNum[i+1] ? result[1] : arNum[i+1];
 		}
 //		최대/최소값 알고리즘
-		System.out.printf("최댓값은 %d, 최솟값은 %d", result[0], result[1]);//출력 부분 = 메소드 자체의 결과값으로 얘가 리턴값이 아님.
+		//출력 부분 = 메소드 자체의 결과값으로 얘가 리턴값이 아님.
 //		하지만 메소드를 main 메소드에서 실행하면 printf가 실행되서 결과가 출력됨.
 		System.out.println("\n메소드 내부 주소값 : " + result);
 	}
@@ -116,14 +117,16 @@ public class MethodTask {
 	
 	public static void main(String[] args) {
 		MethodTask m = new MethodTask();
+		int[] arData = {99,1,5,6,7};
 		int[] arResult = new int[2];
-		m.getMaxMin2(new int[] {99,1,5,6,7}, arResult);
+		m.getMaxMin2(arData, arResult);
+		System.out.printf("최댓값은 %d, 최솟값은 %d", arResult[0], arResult[1]);
 		System.out.println("\n메소드 외부 주소값 : " + arResult);
 		
-		
-//		int[] arResult = new int[2];
-		m.plusMinus2(new int[] {10,4}, arResult);
-		System.out.println("\n메소드 외부 주소값 : " + arResult);
+		int[] arData2= {10,4};
+		int[] arResult2 = new int[2];
+		m.plusMinus2(arData2, arResult2);
+		System.out.println("\n메소드 외부 주소값 : " + arResult2);
 //		 arResult랑 result 는 같은 주소값을 가짐 
 //		즉, 주소값을 받아와서 출력했기 때문에, 열에 한 번 접근해서 값을 확인할 수 있음.
 				
